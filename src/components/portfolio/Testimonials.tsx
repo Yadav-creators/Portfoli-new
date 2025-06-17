@@ -79,10 +79,14 @@ const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
-      align: "center",
-      slidesToScroll: 1,
+      align: "start",
+      slidesToScroll: 4,
+      breakpoints: {
+        "(max-width: 768px)": { slidesToScroll: 1 },
+        "(max-width: 1024px)": { slidesToScroll: 2 },
+      },
     },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })],
+    [Autoplay({ delay: 6000, stopOnInteraction: false })],
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -206,13 +210,13 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Testimonials Carousel */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="flex-[0_0_100%] min-w-0 px-4"
+                  className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] min-w-0 px-3"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -224,7 +228,7 @@ const Testimonials = () => {
                       <Quote className="w-full h-full text-brand-600" />
                     </div>
 
-                    <CardContent className="p-8 md:p-12 relative z-10">
+                    <CardContent className="p-6 md:p-8 relative z-10">
                       {/* Rating Stars */}
                       <motion.div
                         className="flex justify-center mb-6"
@@ -247,7 +251,7 @@ const Testimonials = () => {
                                 ease: "easeInOut",
                               }}
                             >
-                              <Star className="w-6 h-6 text-yellow-400 fill-current mr-1" />
+                              <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
                             </motion.div>
                           ),
                         )}
@@ -255,14 +259,14 @@ const Testimonials = () => {
 
                       {/* Testimonial Text */}
                       <motion.blockquote
-                        className="text-xl md:text-2xl font-medium text-gray-700 text-center mb-8 leading-relaxed italic relative"
+                        className="text-sm md:text-base lg:text-lg font-medium text-gray-700 text-center mb-6 leading-relaxed italic relative"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                       >
-                        <Quote className="absolute -top-4 -left-2 w-8 h-8 text-brand-300 transform rotate-180" />
+                        <Quote className="absolute -top-2 -left-1 w-4 h-4 text-brand-300 transform rotate-180" />
                         "{testimonial.text}"
-                        <Quote className="absolute -bottom-4 -right-2 w-8 h-8 text-brand-300" />
+                        <Quote className="absolute -bottom-2 -right-1 w-4 h-4 text-brand-300" />
                       </motion.blockquote>
 
                       {/* Client Info */}
@@ -274,7 +278,7 @@ const Testimonials = () => {
                       >
                         {/* Avatar */}
                         <motion.div
-                          className={`w-20 h-20 bg-gradient-to-br ${testimonial.gradient} rounded-full flex items-center justify-center text-3xl shadow-lg`}
+                          className={`w-14 h-14 bg-gradient-to-br ${testimonial.gradient} rounded-full flex items-center justify-center text-2xl shadow-lg`}
                           whileHover={{
                             scale: 1.1,
                             rotate: [0, -5, 5, 0],
@@ -286,13 +290,13 @@ const Testimonials = () => {
 
                         {/* Name and Role */}
                         <div className="text-center">
-                          <h4 className="text-xl font-bold text-gray-900 mb-1">
+                          <h4 className="text-lg font-bold text-gray-900 mb-1">
                             {testimonial.name}
                           </h4>
-                          <p className="text-brand-600 font-semibold mb-1">
+                          <p className="text-brand-600 font-semibold mb-1 text-sm">
                             {testimonial.role}
                           </p>
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-xs">
                             {testimonial.company}
                           </p>
                         </div>
