@@ -24,6 +24,15 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        brand: {
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+        },
+        shopify: "#95bf47",
+        wordpress: "#21759b",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
