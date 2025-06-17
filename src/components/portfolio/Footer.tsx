@@ -64,18 +64,23 @@ const Footer = () => {
             >
               <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {["Home", "About", "Skills", "Projects", "Contact"].map(
-                  (link) => (
-                    <li key={link}>
-                      <a
-                        href={`#${link.toLowerCase()}`}
-                        className="text-gray-300 hover:text-brand-400 transition-colors"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ),
-                )}
+                {[
+                  "Home",
+                  "About",
+                  "Skills",
+                  "Projects",
+                  "Testimonials",
+                  "Contact",
+                ].map((link) => (
+                  <li key={link}>
+                    <a
+                      href={`#${link.toLowerCase()}`}
+                      className="text-gray-300 hover:text-brand-400 transition-colors"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
