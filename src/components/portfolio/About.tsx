@@ -56,51 +56,143 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="relative"
           >
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-brand-100 to-brand-200 rounded-2xl flex items-center justify-center">
-                <div className="text-8xl opacity-30">👨‍💻</div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-brand-600 text-white p-4 rounded-xl">
+            <div className="relative group">
+              <motion.div
+                className="aspect-square bg-gradient-to-br from-brand-100 via-brand-200 to-purple-200 rounded-3xl flex items-center justify-center overflow-hidden shadow-2xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  className="text-8xl"
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  👨‍💻
+                </motion.div>
+
+                {/* Floating Elements */}
+                <motion.div
+                  className="absolute top-8 right-8 text-3xl"
+                  animate={{
+                    rotate: [0, 360],
+                    y: [0, -5, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                >
+                  ⚡
+                </motion.div>
+
+                <motion.div
+                  className="absolute bottom-8 left-8 text-2xl"
+                  animate={{
+                    y: [0, -8, 0],
+                    x: [0, 5, 0],
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
+                >
+                  💻
+                </motion.div>
+              </motion.div>
+
+              {/* Achievement Badge */}
+              <motion.div
+                className="absolute -bottom-6 -right-6 bg-gradient-to-r from-brand-600 to-brand-700 text-white p-5 rounded-2xl shadow-xl border-4 border-white"
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                whileHover={{ scale: 1.1 }}
+              >
                 <Award className="w-8 h-8" />
-              </div>
+              </motion.div>
+
+              {/* Background Decoration */}
+              <div className="absolute -z-10 top-4 left-4 w-full h-full bg-gradient-to-br from-brand-300/20 to-purple-300/20 rounded-3xl blur-sm"></div>
             </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="space-y-6"
           >
-            <Badge className="mb-4 bg-brand-100 text-brand-700 hover:bg-brand-200">
-              About Me
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Badge className="mb-6 bg-gradient-to-r from-brand-100 to-purple-100 text-brand-700 hover:from-brand-200 hover:to-purple-200 px-4 py-2 text-sm font-medium">
+                ✨ About Me
+              </Badge>
+            </motion.div>
+
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-brand-600 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               Passionate Developer with a Focus on Results
-            </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              With over 5 years of experience in e-commerce development, I
-              specialize in creating high-performance Shopify and WordPress
-              solutions that drive business growth. My passion lies in
-              transforming complex requirements into elegant, user-friendly
-              experiences.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              I believe in clean code, scalable architectures, and delivering
-              projects that exceed expectations. Every line of code I write is
-              crafted with performance, accessibility, and user experience in
-              mind.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button className="bg-brand-600 hover:bg-brand-700">
+            </motion.h2>
+
+            <motion.div
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <p className="text-lg text-gray-600 leading-relaxed">
+                With over 5 years of experience in e-commerce development, I
+                specialize in creating high-performance Shopify and WordPress
+                solutions that drive business growth. My passion lies in
+                transforming complex requirements into elegant, user-friendly
+                experiences.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                I believe in clean code, scalable architectures, and delivering
+                projects that exceed expectations. Every line of code I write is
+                crafted with performance, accessibility, and user experience in
+                mind.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-wrap gap-4 pt-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <Button className="bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 shadow-lg hover:shadow-xl transition-all duration-300">
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
               </Button>
-              <Button variant="outline">Schedule a Call</Button>
-            </div>
+              <Button
+                variant="outline"
+                className="border-2 hover:bg-brand-50 hover:border-brand-300 transition-all duration-300"
+              >
+                Schedule a Call
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
 
@@ -132,11 +224,20 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Badge className="mb-6 bg-gradient-to-r from-brand-100 to-purple-100 text-brand-700 px-4 py-2 text-sm font-medium">
+              🚀 What I Do
+            </Badge>
+          </motion.div>
+          <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-brand-600 to-gray-900 bg-clip-text text-transparent mb-6">
             Services I Offer
           </h3>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -147,46 +248,106 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, staggerChildren: 0.1 }}
+          transition={{ duration: 0.6, staggerChildren: 0.2 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-3 gap-8"
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full hover:shadow-lg transition-shadow border-0 shadow-md">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
-                    <div className="text-2xl">
-                      {index === 0 ? "🛍️" : index === 1 ? "🌐" : "📊"}
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                    {service.title}
-                  </h4>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-sm text-gray-600"
+          {services.map((service, index) => {
+            const icons = [
+              {
+                emoji: "🛍️",
+                icon: "M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5.5M7 13l2.5 5.5m0 0h8",
+              },
+              {
+                emoji: "🌐",
+                icon: "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418",
+              },
+              {
+                emoji: "📊",
+                icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+              },
+            ];
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group"
+              >
+                <Card className="h-full hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-gradient-to-br from-white to-gray-50/50 group-hover:from-brand-50/30 group-hover:to-purple-50/30 overflow-hidden">
+                  <CardContent className="p-8 relative">
+                    {/* Background Pattern */}
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-brand-100/50 to-purple-100/50 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+
+                    {/* Animated Icon */}
+                    <motion.div
+                      className="relative z-10 w-16 h-16 bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                      whileHover={{
+                        rotate: [0, -10, 10, 0],
+                        scale: 1.1,
+                      }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <motion.div
+                        className="text-3xl"
+                        animate={{
+                          y: [0, -2, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: index * 0.3,
+                        }}
                       >
-                        <div className="w-1.5 h-1.5 bg-brand-600 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                        {icons[index].emoji}
+                      </motion.div>
+                    </motion.div>
+
+                    <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-brand-600 transition-colors duration-300">
+                      {service.title}
+                    </h4>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <motion.ul
+                      className="space-y-3"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                    >
+                      {service.features.map((feature, featureIndex) => (
+                        <motion.li
+                          key={featureIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{
+                            delay: 0.6 + index * 0.1 + featureIndex * 0.1,
+                            duration: 0.5,
+                          }}
+                          className="flex items-center text-sm text-gray-600 group-hover:text-gray-700"
+                        >
+                          <motion.div
+                            className="w-2 h-2 bg-gradient-to-r from-brand-500 to-brand-600 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"
+                            whileHover={{ scale: 1.5 }}
+                          ></motion.div>
+                          {feature}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+
+                    {/* Hover Effect Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
