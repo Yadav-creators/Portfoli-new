@@ -11,168 +11,333 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState("All");
 
   const allProjects = [
-    // Fashion & Clothing
+    // Wellness
     {
-      title: "Premium Fashion Store",
+      title: "Organic Wellness Store",
       description:
-        "High-end Shopify Plus store with custom product configurator, subscription integration, and multi-currency support.",
+        "Natural health and wellness Shopify store with subscription boxes, personalized recommendations, and wellness tracking.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Liquid", "JavaScript", "Subscription"],
+      tags: ["Shopify Plus", "Subscription", "Wellness", "Health Tracking"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Fashion",
+      category: "Wellness",
       year: "2024",
     },
     {
-      title: "Luxury Clothing Brand",
+      title: "Yoga & Meditation Studio",
       description:
-        "Elegant Shopify store with size guides, virtual fitting room, and personalized styling recommendations.",
+        "Holistic wellness platform with class booking, meditation guides, and community features for mind-body wellness.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify", "AR Integration", "Custom Theme", "Mobile-First"],
+      tags: ["WordPress", "Booking System", "Community", "Meditation"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Fashion",
+      category: "Wellness",
       year: "2024",
     },
     {
-      title: "Streetwear Collection",
+      title: "Natural Supplements Store",
       description:
-        "Urban fashion WordPress site with limited drops, countdown timers, and social media integration.",
+        "Premium supplement e-commerce with detailed product information, health assessments, and expert consultations.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "WooCommerce", "Social Media", "Limited Drops"],
+      tags: ["Shopify", "Health Assessment", "Expert Chat", "Custom Forms"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Fashion",
+      category: "Wellness",
       year: "2023",
     },
 
-    // Pet & Animals
+    // Clothing
     {
-      title: "Pet Supply Store",
+      title: "Premium Fashion Boutique",
       description:
-        "Comprehensive pet store with subscription boxes, pet profiles, and veterinary appointment booking.",
+        "High-end clothing store with virtual try-on, size matching, and personal styling services.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Subscription", "Custom App", "Booking System"],
+      tags: ["Shopify Plus", "AR Try-On", "Size Guide", "Personal Styling"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Pets",
+      category: "Clothing",
+      year: "2024",
+    },
+    {
+      title: "Sustainable Fashion Brand",
+      description:
+        "Eco-friendly clothing store with sustainability tracking, carbon offset integration, and ethical sourcing information.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Sustainability", "Carbon Tracking", "Ethical"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Clothing",
+      year: "2024",
+    },
+    {
+      title: "Athletic Wear Collection",
+      description:
+        "Performance sportswear store with fitness integration, workout plans, and athlete endorsements.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Fitness Integration", "Performance", "Athletes"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Clothing",
+      year: "2023",
+    },
+
+    // Adornment
+    {
+      title: "Luxury Jewelry Boutique",
+      description:
+        "Exquisite jewelry store with 360° product views, custom engraving, and virtual try-on for precious pieces.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "360° View", "Custom Engraving", "AR Try-On"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Adornment",
+      year: "2024",
+    },
+    {
+      title: "Handcrafted Accessories",
+      description:
+        "Artisan accessories store with maker stories, customization options, and limited edition collections.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Customization", "Artisan Stories", "Limited Edition"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Adornment",
+      year: "2024",
+    },
+    {
+      title: "Wedding Jewelry Collection",
+      description:
+        "Bridal jewelry store with appointment booking, custom design services, and wedding timeline integration.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Appointment Booking", "Custom Design", "Bridal"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Adornment",
+      year: "2023",
+    },
+
+    // Decor
+    {
+      title: "Modern Home Decor",
+      description:
+        "Contemporary furniture and decor store with AR room visualization and interior design consultation.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "AR Visualization", "Interior Design", "Modern"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Decor",
+      year: "2024",
+    },
+    {
+      title: "Vintage Furniture Gallery",
+      description:
+        "Curated vintage furniture store with authenticity certificates, restoration services, and design history.",
+      image: "/api/placeholder/600/400",
+      tags: ["WordPress", "Authenticity", "Restoration", "History"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Decor",
+      year: "2024",
+    },
+    {
+      title: "Garden & Outdoor Living",
+      description:
+        "Outdoor decor and garden furniture store with seasonal collections and landscaping consultation.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Seasonal", "Landscaping", "Outdoor"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Decor",
+      year: "2023",
+    },
+
+    // Pet
+    {
+      title: "Premium Pet Supply Store",
+      description:
+        "Comprehensive pet store with subscription boxes, pet profiles, and veterinary appointment integration.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Subscription", "Pet Profiles", "Vet Integration"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pet",
       year: "2024",
     },
     {
       title: "Dog Training Academy",
       description:
-        "WordPress LMS for dog training courses with video lessons, progress tracking, and certification.",
+        "Professional dog training platform with video courses, progress tracking, and trainer certification.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "LMS", "Video Integration", "Certificates"],
+      tags: [
+        "WordPress",
+        "Video Courses",
+        "Progress Tracking",
+        "Certification",
+      ],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Pets",
-      year: "2023",
+      category: "Pet",
+      year: "2024",
     },
     {
-      title: "Veterinary Clinic",
+      title: "Exotic Pet Specialist",
       description:
-        "Professional clinic website with appointment booking, patient records, and emergency services.",
+        "Specialized store for exotic pets with care guides, expert consultation, and rare species products.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Booking System", "Patient Portal", "Medical"],
+      tags: ["Shopify", "Care Guides", "Expert Chat", "Exotic Species"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Pets",
+      category: "Pet",
       year: "2023",
     },
 
-    // Food & Restaurant
+    // Headless Stores
     {
-      title: "Restaurant Chain Website",
+      title: "Next.js Headless Commerce",
       description:
-        "Multi-location WordPress site with online ordering, location finder, and headless CMS integration.",
+        "Ultra-fast headless Shopify store with Next.js frontend, advanced caching, and seamless mobile experience.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "WooCommerce", "React", "API Integration"],
+      tags: ["Shopify Headless", "Next.js", "GraphQL", "PWA"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Food",
+      category: "Headless",
       year: "2024",
     },
     {
-      title: "Gourmet Food Delivery",
+      title: "React Multi-Channel Store",
       description:
-        "Premium food delivery platform with chef profiles, custom meal plans, and real-time tracking.",
+        "Omnichannel headless commerce with React frontend, multiple sales channels, and unified inventory.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Delivery Integration", "Custom Features"],
+      tags: ["Shopify Storefront API", "React", "Multi-Channel", "Inventory"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Food",
+      category: "Headless",
       year: "2024",
     },
     {
-      title: "Organic Farm Store",
+      title: "Vue.js Performance Store",
       description:
-        "Farm-to-table WordPress store with seasonal products, CSA subscriptions, and pickup scheduling.",
+        "Lightning-fast headless store with Vue.js, advanced state management, and optimized checkout flow.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "WooCommerce", "Subscription", "Organic"],
+      tags: ["Shopify Headless", "Vue.js", "State Management", "Optimization"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Food",
+      category: "Headless",
       year: "2023",
     },
 
-    // Tech & SaaS
+    // Custom Apps
     {
-      title: "SaaS Landing Page",
+      title: "Inventory Management App",
       description:
-        "Conversion-optimized landing page with A/B testing, analytics integration, and custom animations.",
+        "Custom Shopify app for advanced inventory tracking, automated reordering, and supplier integration.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Custom Theme", "SEO", "Performance"],
+      tags: ["Shopify App", "Inventory", "Automation", "Supplier Integration"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Tech",
-      year: "2023",
-    },
-    {
-      title: "E-learning Platform",
-      description:
-        "Complete learning management system with course builder, progress tracking, and payment integration.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Custom App", "React", "Dashboard"],
-      liveUrl: "#",
-      codeUrl: "#",
-      category: "Tech",
-      year: "2023",
-    },
-    {
-      title: "Project Management Tool",
-      description:
-        "WordPress-based project management platform with team collaboration and time tracking features.",
-      image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Custom Plugin", "Team Tools", "Analytics"],
-      liveUrl: "#",
-      codeUrl: "#",
-      category: "Tech",
+      category: "Custom Apps",
       year: "2024",
+    },
+    {
+      title: "Customer Loyalty Platform",
+      description:
+        "Comprehensive loyalty app with points system, tier management, and gamification features.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify App", "Loyalty", "Gamification", "Customer Retention"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Custom Apps",
+      year: "2024",
+    },
+    {
+      title: "Advanced Analytics Dashboard",
+      description:
+        "Custom analytics app with AI-powered insights, predictive analytics, and custom reporting.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify App", "Analytics", "AI Insights", "Reporting"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Custom Apps",
+      year: "2023",
+    },
+
+    // Shopify Plus Stores
+    {
+      title: "Enterprise Fashion Marketplace",
+      description:
+        "Large-scale Shopify Plus marketplace with multiple vendors, advanced B2B features, and custom checkout.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Marketplace", "B2B", "Enterprise"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Shopify Plus",
+      year: "2024",
+    },
+    {
+      title: "Global Electronics Retailer",
+      description:
+        "International Shopify Plus store with multi-currency, localization, and complex product configurations.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Multi-Currency", "Localization", "Global"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Shopify Plus",
+      year: "2024",
+    },
+    {
+      title: "Premium Subscription Service",
+      description:
+        "Sophisticated Shopify Plus subscription platform with flexible billing, customer portals, and analytics.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Subscription", "Customer Portal", "Analytics"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Shopify Plus",
+      year: "2023",
     },
   ];
 
   const categories = [
     { name: "All", icon: "🎯", count: allProjects.length },
     {
-      name: "Fashion",
-      icon: "👗",
-      count: allProjects.filter((p) => p.category === "Fashion").length,
+      name: "Wellness",
+      icon: "🌿",
+      count: allProjects.filter((p) => p.category === "Wellness").length,
     },
     {
-      name: "Pets",
-      icon: "🐕",
-      count: allProjects.filter((p) => p.category === "Pets").length,
+      name: "Clothing",
+      icon: "👕",
+      count: allProjects.filter((p) => p.category === "Clothing").length,
     },
     {
-      name: "Food",
-      icon: "🍽️",
-      count: allProjects.filter((p) => p.category === "Food").length,
+      name: "Adornment",
+      icon: "💎",
+      count: allProjects.filter((p) => p.category === "Adornment").length,
     },
     {
-      name: "Tech",
-      icon: "💻",
-      count: allProjects.filter((p) => p.category === "Tech").length,
+      name: "Decor",
+      icon: "🏠",
+      count: allProjects.filter((p) => p.category === "Decor").length,
+    },
+    {
+      name: "Pet",
+      icon: "🐾",
+      count: allProjects.filter((p) => p.category === "Pet").length,
+    },
+    {
+      name: "Headless",
+      icon: "⚡",
+      count: allProjects.filter((p) => p.category === "Headless").length,
+    },
+    {
+      name: "Custom Apps",
+      icon: "⚙️",
+      count: allProjects.filter((p) => p.category === "Custom Apps").length,
+    },
+    {
+      name: "Shopify Plus",
+      icon: "💜",
+      count: allProjects.filter((p) => p.category === "Shopify Plus").length,
     },
   ];
 
@@ -250,13 +415,13 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3 mb-8"
+            className="flex flex-wrap justify-center gap-2 mb-8 max-w-6xl mx-auto"
           >
             {categories.map((category, index) => (
               <motion.button
                 key={category.name}
                 onClick={() => setActiveTab(category.name)}
-                className={`group relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                className={`group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-sm ${
                   activeTab === category.name
                     ? "bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-lg scale-105"
                     : "bg-white hover:bg-gray-50 text-gray-600 hover:text-brand-600 border border-gray-200 hover:border-brand-300"
@@ -344,15 +509,23 @@ const Projects = () => {
                             ease: "easeInOut",
                           }}
                         >
-                          {project.category === "Fashion"
-                            ? "👗"
-                            : project.category === "Pets"
-                              ? "🐕"
-                              : project.category === "Food"
-                                ? "🍽️"
-                                : project.category === "Tech"
-                                  ? "💻"
-                                  : "🛍️"}
+                          {project.category === "Wellness"
+                            ? "🌿"
+                            : project.category === "Clothing"
+                              ? "👕"
+                              : project.category === "Adornment"
+                                ? "💎"
+                                : project.category === "Decor"
+                                  ? "🏠"
+                                  : project.category === "Pet"
+                                    ? "🐾"
+                                    : project.category === "Headless"
+                                      ? "⚡"
+                                      : project.category === "Custom Apps"
+                                        ? "⚙️"
+                                        : project.category === "Shopify Plus"
+                                          ? "💜"
+                                          : "🛍️"}
                         </motion.div>
 
                         {/* Category Badge */}
