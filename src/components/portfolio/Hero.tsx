@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { FaWhatsapp } from "react-icons/fa";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
@@ -242,37 +243,41 @@ const Hero = () => {
               variants={fadeInUp}
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-brand-600 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight"
             >
-              Shopify & WordPress
-              <br />
-              <span className="text-brand-600">Developer</span>
+              Shopify Expert & Full-Stack Developer
+              
+              <span className="text-brand-600"></span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
               className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              I craft high-converting e-commerce experiences and beautiful
-              websites that drive results for ambitious brands.
+              I specialize in crafting high-converting Shopify stores and dynamic 
+              full-stack solutions that drive results for ambitious brands.
             </motion.p>
 
             <motion.div
               variants={fadeInUp}
               className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12"
             >
-              <Button
-                size="lg"
-                className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
-              >
-                View My Work
-              </Button>
+              <a href="/#projects">
+                <Button
+                  size="lg"
+                  className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+                >
+                  View My Work
+                </Button>
+              </a>
+              <a href="https://wa.me/917379081148">
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-lg rounded-xl border-2 hover:bg-gray-50"
+                className="px-8 py-6 text-lg rounded-xl border-2 hover:bg-brand-700"
               >
-                <Mail className="mr-2 h-5 w-5" />
+                <FaWhatsapp className="mr-2 h-5 w-5" />
                 Get In Touch
               </Button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -280,19 +285,19 @@ const Hero = () => {
               className="flex justify-center lg:justify-start space-x-6 mb-16"
             >
               <a
-                href="#"
+                href="https://github.com/Yadav-creators"
                 className="text-gray-600 hover:text-brand-600 transition-colors"
               >
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/yadav-creators/"
                 className="text-gray-600 hover:text-brand-600 transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="mailto:yadav.creators@gmail.com"
                 className="text-gray-600 hover:text-brand-600 transition-colors"
               >
                 <Mail className="h-6 w-6" />

@@ -27,7 +27,7 @@ const Skills = () => {
           color: "bg-yellow-500",
           icon: "⚡",
         },
-        { name: "React", level: 85, color: "bg-blue-500", icon: "⚛️" },
+        { name: "React, Remix , Shopify Hydrogen", level: 85, color: "bg-blue-500", icon: "⚛️" },
         { name: "HTML/CSS", level: 95, color: "bg-orange-500", icon: "🎨" },
         {
           name: "Liquid Templating",

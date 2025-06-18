@@ -9,34 +9,38 @@ const About = () => {
     { icon: Users, label: "Happy Clients", value: "50+" },
     { icon: Award, label: "Projects Completed", value: "100+" },
     { icon: Coffee, label: "Cups of Coffee", value: "1000+" },
-    { icon: Zap, label: "Years Experience", value: "5+" },
+    { icon: Zap, label: "Years Experience", value: "4+" },
   ];
 
   const services = [
     {
-      title: "Shopify Development",
+      title: "Shopify Store and App Development",
       description:
         "Custom themes, app development, and store optimization for maximum conversions.",
       features: [
         "Custom Theme Development",
         "App Integration",
         "Performance Optimization",
+        "Custom App Development",
+        "Shopify Hydrogen Development",
         "Migration Services",
       ],
     },
     {
-      title: "WordPress Development",
+      title: "Custom Website Development",
       description:
         "Custom websites, e-commerce solutions, and content management systems.",
       features: [
         "Custom Theme Development",
-        "Plugin Development",
-        "WooCommerce Setup",
+        "React Website Development",
+        "Headless Website Development",
+        "WordPress Development",
+        "WordPress Plugin Development",
         "SEO Optimization",
       ],
     },
     {
-      title: "E-commerce Consulting",
+      title: "E-commerce Solutions",
       description:
         "Strategic guidance to maximize your online store's potential and revenue.",
       features: [
@@ -44,6 +48,8 @@ const About = () => {
         "Conversion Optimization",
         "User Experience Design",
         "Performance Analysis",
+        "Landing Page Development",
+        "Website Speed Optimization",
       ],
     },
   ];
@@ -182,16 +188,20 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
+              <a href="./../../../public/resume.pdf" download>
               <Button className="bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 shadow-lg hover:shadow-xl transition-all duration-300">
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
               </Button>
+              </a>
+              <a href="https://wa.me/917379081148">
               <Button
                 variant="outline"
-                className="border-2 hover:bg-brand-50 hover:border-brand-300 transition-all duration-300"
+                className="border-2 hover:from-brand-700 hover:to-brand-800 hover:from-brand-700 hover:to-brand-800 transition-all duration-300"
               >
                 Schedule a Call
               </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
