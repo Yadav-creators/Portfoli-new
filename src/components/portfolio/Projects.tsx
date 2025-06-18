@@ -8,7 +8,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("Wellness");
 
   const allProjects = [
     // Wellness
