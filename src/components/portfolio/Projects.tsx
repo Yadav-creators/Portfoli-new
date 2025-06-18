@@ -8,74 +8,343 @@ import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
 
 const Projects = () => {
-  const projects = [
+  const [activeTab, setActiveTab] = useState("Wellness");
+
+  const allProjects = [
+    // Wellness
     {
-      title: "Premium Fashion Store",
+      title: "Organic Wellness Store",
       description:
-        "High-end Shopify Plus store with custom product configurator, subscription integration, and multi-currency support.",
+        "Natural health and wellness Shopify store with subscription boxes, personalized recommendations, and wellness tracking.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Liquid", "JavaScript", "Subscription"],
+      tags: ["Shopify Plus", "Subscription", "Wellness", "Health Tracking"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "E-commerce",
+      category: "Wellness",
       year: "2024",
     },
     {
-      title: "Restaurant Chain Website",
+      title: "Yoga & Meditation Studio",
       description:
-        "Multi-location WordPress site with online ordering, location finder, and headless CMS integration.",
+        "Holistic wellness platform with class booking, meditation guides, and community features for mind-body wellness.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "WooCommerce", "React", "API Integration"],
+      tags: ["WordPress", "Booking System", "Community", "Meditation"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Restaurant",
+      category: "Wellness",
       year: "2024",
     },
     {
-      title: "SaaS Landing Page",
+      title: "Natural Supplements Store",
       description:
-        "Conversion-optimized landing page with A/B testing, analytics integration, and custom animations.",
+        "Premium supplement e-commerce with detailed product information, health assessments, and expert consultations.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Custom Theme", "SEO", "Performance"],
+      tags: ["Shopify", "Health Assessment", "Expert Chat", "Custom Forms"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "SaaS",
+      category: "Wellness",
       year: "2023",
     },
+
+    // Clothing
     {
-      title: "E-learning Platform",
+      title: "Premium Fashion Boutique",
       description:
-        "Complete learning management system with course builder, progress tracking, and payment integration.",
+        "High-end clothing store with virtual try-on, size matching, and personal styling services.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Custom App", "React", "Dashboard"],
+      tags: ["Shopify Plus", "AR Try-On", "Size Guide", "Personal Styling"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Education",
-      year: "2023",
+      category: "Clothing",
+      year: "2024",
     },
     {
-      title: "Beauty Brand Store",
+      title: "Sustainable Fashion Brand",
       description:
-        "Mobile-first Shopify store with AR try-on features, quiz integration, and personalized recommendations.",
+        "Eco-friendly clothing store with sustainability tracking, carbon offset integration, and ethical sourcing information.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Mobile-First", "AR Integration", "Quiz"],
+      tags: ["Shopify", "Sustainability", "Carbon Tracking", "Ethical"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Beauty",
-      year: "2023",
+      category: "Clothing",
+      year: "2024",
     },
     {
-      title: "Corporate Website",
+      title: "Athletic Wear Collection",
       description:
-        "Enterprise WordPress site with custom blocks, team management, and multilingual support.",
+        "Performance sportswear store with fitness integration, workout plans, and athlete endorsements.",
       image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Custom Blocks", "Multilingual", "Enterprise"],
+      tags: ["Shopify Plus", "Fitness Integration", "Performance", "Athletes"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Corporate",
+      category: "Clothing",
+      year: "2023",
+    },
+
+    // Adornment
+    {
+      title: "Luxury Jewelry Boutique",
+      description:
+        "Exquisite jewelry store with 360° product views, custom engraving, and virtual try-on for precious pieces.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "360° View", "Custom Engraving", "AR Try-On"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Adornment",
+      year: "2024",
+    },
+    {
+      title: "Handcrafted Accessories",
+      description:
+        "Artisan accessories store with maker stories, customization options, and limited edition collections.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Customization", "Artisan Stories", "Limited Edition"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Adornment",
+      year: "2024",
+    },
+    {
+      title: "Wedding Jewelry Collection",
+      description:
+        "Bridal jewelry store with appointment booking, custom design services, and wedding timeline integration.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Appointment Booking", "Custom Design", "Bridal"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Adornment",
+      year: "2023",
+    },
+
+    // Decor
+    {
+      title: "Modern Home Decor",
+      description:
+        "Contemporary furniture and decor store with AR room visualization and interior design consultation.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "AR Visualization", "Interior Design", "Modern"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Decor",
+      year: "2024",
+    },
+    {
+      title: "Vintage Furniture Gallery",
+      description:
+        "Curated vintage furniture store with authenticity certificates, restoration services, and design history.",
+      image: "/api/placeholder/600/400",
+      tags: ["WordPress", "Authenticity", "Restoration", "History"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Decor",
+      year: "2024",
+    },
+    {
+      title: "Garden & Outdoor Living",
+      description:
+        "Outdoor decor and garden furniture store with seasonal collections and landscaping consultation.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Seasonal", "Landscaping", "Outdoor"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Decor",
+      year: "2023",
+    },
+
+    // Pet
+    {
+      title: "Premium Pet Supply Store",
+      description:
+        "Comprehensive pet store with subscription boxes, pet profiles, and veterinary appointment integration.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Subscription", "Pet Profiles", "Vet Integration"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pet",
+      year: "2024",
+    },
+    {
+      title: "Dog Training Academy",
+      description:
+        "Professional dog training platform with video courses, progress tracking, and trainer certification.",
+      image: "/api/placeholder/600/400",
+      tags: [
+        "WordPress",
+        "Video Courses",
+        "Progress Tracking",
+        "Certification",
+      ],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pet",
+      year: "2024",
+    },
+    {
+      title: "Exotic Pet Specialist",
+      description:
+        "Specialized store for exotic pets with care guides, expert consultation, and rare species products.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Care Guides", "Expert Chat", "Exotic Species"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pet",
+      year: "2023",
+    },
+
+    // Headless Stores
+    {
+      title: "Next.js Headless Commerce",
+      description:
+        "Ultra-fast headless Shopify store with Next.js frontend, advanced caching, and seamless mobile experience.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Headless", "Next.js", "GraphQL", "PWA"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Headless",
+      year: "2024",
+    },
+    {
+      title: "React Multi-Channel Store",
+      description:
+        "Omnichannel headless commerce with React frontend, multiple sales channels, and unified inventory.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Storefront API", "React", "Multi-Channel", "Inventory"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Headless",
+      year: "2024",
+    },
+    {
+      title: "Vue.js Performance Store",
+      description:
+        "Lightning-fast headless store with Vue.js, advanced state management, and optimized checkout flow.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Headless", "Vue.js", "State Management", "Optimization"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Headless",
+      year: "2023",
+    },
+
+    // Custom Apps
+    {
+      title: "Inventory Management App",
+      description:
+        "Custom Shopify app for advanced inventory tracking, automated reordering, and supplier integration.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify App", "Inventory", "Automation", "Supplier Integration"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Custom Apps",
+      year: "2024",
+    },
+    {
+      title: "Customer Loyalty Platform",
+      description:
+        "Comprehensive loyalty app with points system, tier management, and gamification features.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify App", "Loyalty", "Gamification", "Customer Retention"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Custom Apps",
+      year: "2024",
+    },
+    {
+      title: "Advanced Analytics Dashboard",
+      description:
+        "Custom analytics app with AI-powered insights, predictive analytics, and custom reporting.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify App", "Analytics", "AI Insights", "Reporting"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Custom Apps",
+      year: "2023",
+    },
+
+    // Shopify Plus Stores
+    {
+      title: "Enterprise Fashion Marketplace",
+      description:
+        "Large-scale Shopify Plus marketplace with multiple vendors, advanced B2B features, and custom checkout.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Marketplace", "B2B", "Enterprise"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Shopify Plus",
+      year: "2024",
+    },
+    {
+      title: "Global Electronics Retailer",
+      description:
+        "International Shopify Plus store with multi-currency, localization, and complex product configurations.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Multi-Currency", "Localization", "Global"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Shopify Plus",
+      year: "2024",
+    },
+    {
+      title: "Premium Subscription Service",
+      description:
+        "Sophisticated Shopify Plus subscription platform with flexible billing, customer portals, and analytics.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Subscription", "Customer Portal", "Analytics"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Shopify Plus",
       year: "2023",
     },
   ];
+
+  const categories = [
+    { name: "All", icon: "🎯", count: allProjects.length },
+    {
+      name: "Wellness",
+      icon: "🌿",
+      count: allProjects.filter((p) => p.category === "Wellness").length,
+    },
+    {
+      name: "Clothing",
+      icon: "👕",
+      count: allProjects.filter((p) => p.category === "Clothing").length,
+    },
+    {
+      name: "Adornment",
+      icon: "💎",
+      count: allProjects.filter((p) => p.category === "Adornment").length,
+    },
+    {
+      name: "Decor",
+      icon: "🏠",
+      count: allProjects.filter((p) => p.category === "Decor").length,
+    },
+    {
+      name: "Pet",
+      icon: "🐾",
+      count: allProjects.filter((p) => p.category === "Pet").length,
+    },
+    {
+      name: "Headless",
+      icon: "⚡",
+      count: allProjects.filter((p) => p.category === "Headless").length,
+    },
+    {
+      name: "Custom Apps",
+      icon: "⚙️",
+      count: allProjects.filter((p) => p.category === "Custom Apps").length,
+    },
+    {
+      name: "Shopify Plus",
+      icon: "💜",
+      count: allProjects.filter((p) => p.category === "Shopify Plus").length,
+    },
+  ];
+
+  const projects =
+    activeTab === "All"
+      ? allProjects
+      : allProjects.filter((project) => project.category === activeTab);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -135,14 +404,84 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-brand-600 to-gray-900 bg-clip-text text-transparent mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
             A showcase of successful e-commerce and web development projects
             I've delivered
           </p>
+
+          {/* Project Category Tabs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-2 mb-8 max-w-6xl mx-auto"
+          >
+            {categories.map((category, index) => (
+              <motion.button
+                key={category.name}
+                onClick={() => setActiveTab(category.name)}
+                className={`group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-sm ${
+                  activeTab === category.name
+                    ? "bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-lg scale-105"
+                    : "bg-white hover:bg-gray-50 text-gray-600 hover:text-brand-600 border border-gray-200 hover:border-brand-300"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center space-x-2">
+                  <motion.span
+                    className="text-lg"
+                    animate={
+                      activeTab === category.name
+                        ? {
+                            scale: [1, 1.2, 1],
+                            rotate: [0, 10, 0],
+                          }
+                        : {}
+                    }
+                    transition={{ duration: 0.5 }}
+                  >
+                    {category.icon}
+                  </motion.span>
+                  <span>{category.name}</span>
+                  <Badge
+                    variant="secondary"
+                    className={`text-xs ${
+                      activeTab === category.name
+                        ? "bg-white/20 text-white border-0"
+                        : "bg-gray-100 text-gray-600"
+                    }`}
+                  >
+                    {category.count}
+                  </Badge>
+                </div>
+
+                {/* Active tab indicator */}
+                {activeTab === category.name && (
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-brand-500 to-brand-600 rounded-xl -z-10"
+                    layoutId="activeTab"
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+              </motion.button>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Carousel */}
-        <div className="relative">
+        <motion.div
+          className="relative"
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {projects.map((project, index) => (
@@ -170,17 +509,23 @@ const Projects = () => {
                             ease: "easeInOut",
                           }}
                         >
-                          {project.category === "E-commerce"
-                            ? "🛍️"
-                            : project.category === "Restaurant"
-                              ? "🍽️"
-                              : project.category === "SaaS"
-                                ? "💼"
-                                : project.category === "Education"
-                                  ? "📚"
-                                  : project.category === "Beauty"
-                                    ? "💄"
-                                    : "🏢"}
+                          {project.category === "Wellness"
+                            ? "🌿"
+                            : project.category === "Clothing"
+                              ? "👕"
+                              : project.category === "Adornment"
+                                ? "💎"
+                                : project.category === "Decor"
+                                  ? "🏠"
+                                  : project.category === "Pet"
+                                    ? "🐾"
+                                    : project.category === "Headless"
+                                      ? "⚡"
+                                      : project.category === "Custom Apps"
+                                        ? "⚙️"
+                                        : project.category === "Shopify Plus"
+                                          ? "💜"
+                                          : "🛍️"}
                         </motion.div>
 
                         {/* Category Badge */}
@@ -266,7 +611,7 @@ const Projects = () => {
           >
             <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-brand-600" />
           </motion.button>
-        </div>
+        </motion.div>
 
         {/* Dots Indicator */}
         <motion.div
