@@ -8,7 +8,10 @@ import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
 
 const Projects = () => {
-  const projects = [
+  const [activeTab, setActiveTab] = useState("All");
+
+  const allProjects = [
+    // Fashion & Clothing
     {
       title: "Premium Fashion Store",
       description:
@@ -17,9 +20,68 @@ const Projects = () => {
       tags: ["Shopify Plus", "Liquid", "JavaScript", "Subscription"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "E-commerce",
+      category: "Fashion",
       year: "2024",
     },
+    {
+      title: "Luxury Clothing Brand",
+      description:
+        "Elegant Shopify store with size guides, virtual fitting room, and personalized styling recommendations.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "AR Integration", "Custom Theme", "Mobile-First"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Fashion",
+      year: "2024",
+    },
+    {
+      title: "Streetwear Collection",
+      description:
+        "Urban fashion WordPress site with limited drops, countdown timers, and social media integration.",
+      image: "/api/placeholder/600/400",
+      tags: ["WordPress", "WooCommerce", "Social Media", "Limited Drops"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Fashion",
+      year: "2023",
+    },
+
+    // Pet & Animals
+    {
+      title: "Pet Supply Store",
+      description:
+        "Comprehensive pet store with subscription boxes, pet profiles, and veterinary appointment booking.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify", "Subscription", "Custom App", "Booking System"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pets",
+      year: "2024",
+    },
+    {
+      title: "Dog Training Academy",
+      description:
+        "WordPress LMS for dog training courses with video lessons, progress tracking, and certification.",
+      image: "/api/placeholder/600/400",
+      tags: ["WordPress", "LMS", "Video Integration", "Certificates"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pets",
+      year: "2023",
+    },
+    {
+      title: "Veterinary Clinic",
+      description:
+        "Professional clinic website with appointment booking, patient records, and emergency services.",
+      image: "/api/placeholder/600/400",
+      tags: ["WordPress", "Booking System", "Patient Portal", "Medical"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Pets",
+      year: "2023",
+    },
+
+    // Food & Restaurant
     {
       title: "Restaurant Chain Website",
       description:
@@ -28,9 +90,33 @@ const Projects = () => {
       tags: ["WordPress", "WooCommerce", "React", "API Integration"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Restaurant",
+      category: "Food",
       year: "2024",
     },
+    {
+      title: "Gourmet Food Delivery",
+      description:
+        "Premium food delivery platform with chef profiles, custom meal plans, and real-time tracking.",
+      image: "/api/placeholder/600/400",
+      tags: ["Shopify Plus", "Delivery Integration", "Custom Features"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Food",
+      year: "2024",
+    },
+    {
+      title: "Organic Farm Store",
+      description:
+        "Farm-to-table WordPress store with seasonal products, CSA subscriptions, and pickup scheduling.",
+      image: "/api/placeholder/600/400",
+      tags: ["WordPress", "WooCommerce", "Subscription", "Organic"],
+      liveUrl: "#",
+      codeUrl: "#",
+      category: "Food",
+      year: "2023",
+    },
+
+    // Tech & SaaS
     {
       title: "SaaS Landing Page",
       description:
@@ -39,7 +125,7 @@ const Projects = () => {
       tags: ["WordPress", "Custom Theme", "SEO", "Performance"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "SaaS",
+      category: "Tech",
       year: "2023",
     },
     {
@@ -50,32 +136,50 @@ const Projects = () => {
       tags: ["Shopify", "Custom App", "React", "Dashboard"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Education",
+      category: "Tech",
       year: "2023",
     },
     {
-      title: "Beauty Brand Store",
+      title: "Project Management Tool",
       description:
-        "Mobile-first Shopify store with AR try-on features, quiz integration, and personalized recommendations.",
+        "WordPress-based project management platform with team collaboration and time tracking features.",
       image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Mobile-First", "AR Integration", "Quiz"],
+      tags: ["WordPress", "Custom Plugin", "Team Tools", "Analytics"],
       liveUrl: "#",
       codeUrl: "#",
-      category: "Beauty",
-      year: "2023",
-    },
-    {
-      title: "Corporate Website",
-      description:
-        "Enterprise WordPress site with custom blocks, team management, and multilingual support.",
-      image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Custom Blocks", "Multilingual", "Enterprise"],
-      liveUrl: "#",
-      codeUrl: "#",
-      category: "Corporate",
-      year: "2023",
+      category: "Tech",
+      year: "2024",
     },
   ];
+
+  const categories = [
+    { name: "All", icon: "🎯", count: allProjects.length },
+    {
+      name: "Fashion",
+      icon: "👗",
+      count: allProjects.filter((p) => p.category === "Fashion").length,
+    },
+    {
+      name: "Pets",
+      icon: "🐕",
+      count: allProjects.filter((p) => p.category === "Pets").length,
+    },
+    {
+      name: "Food",
+      icon: "🍽️",
+      count: allProjects.filter((p) => p.category === "Food").length,
+    },
+    {
+      name: "Tech",
+      icon: "💻",
+      count: allProjects.filter((p) => p.category === "Tech").length,
+    },
+  ];
+
+  const projects =
+    activeTab === "All"
+      ? allProjects
+      : allProjects.filter((project) => project.category === activeTab);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -135,14 +239,84 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-brand-600 to-gray-900 bg-clip-text text-transparent mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
             A showcase of successful e-commerce and web development projects
             I've delivered
           </p>
+
+          {/* Project Category Tabs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-3 mb-8"
+          >
+            {categories.map((category, index) => (
+              <motion.button
+                key={category.name}
+                onClick={() => setActiveTab(category.name)}
+                className={`group relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === category.name
+                    ? "bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-lg scale-105"
+                    : "bg-white hover:bg-gray-50 text-gray-600 hover:text-brand-600 border border-gray-200 hover:border-brand-300"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center space-x-2">
+                  <motion.span
+                    className="text-lg"
+                    animate={
+                      activeTab === category.name
+                        ? {
+                            scale: [1, 1.2, 1],
+                            rotate: [0, 10, 0],
+                          }
+                        : {}
+                    }
+                    transition={{ duration: 0.5 }}
+                  >
+                    {category.icon}
+                  </motion.span>
+                  <span>{category.name}</span>
+                  <Badge
+                    variant="secondary"
+                    className={`text-xs ${
+                      activeTab === category.name
+                        ? "bg-white/20 text-white border-0"
+                        : "bg-gray-100 text-gray-600"
+                    }`}
+                  >
+                    {category.count}
+                  </Badge>
+                </div>
+
+                {/* Active tab indicator */}
+                {activeTab === category.name && (
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-brand-500 to-brand-600 rounded-xl -z-10"
+                    layoutId="activeTab"
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+              </motion.button>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Carousel */}
-        <div className="relative">
+        <motion.div
+          className="relative"
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {projects.map((project, index) => (
@@ -170,17 +344,15 @@ const Projects = () => {
                             ease: "easeInOut",
                           }}
                         >
-                          {project.category === "E-commerce"
-                            ? "🛍️"
-                            : project.category === "Restaurant"
-                              ? "🍽️"
-                              : project.category === "SaaS"
-                                ? "💼"
-                                : project.category === "Education"
-                                  ? "📚"
-                                  : project.category === "Beauty"
-                                    ? "💄"
-                                    : "🏢"}
+                          {project.category === "Fashion"
+                            ? "👗"
+                            : project.category === "Pets"
+                              ? "🐕"
+                              : project.category === "Food"
+                                ? "🍽️"
+                                : project.category === "Tech"
+                                  ? "💻"
+                                  : "🛍️"}
                         </motion.div>
 
                         {/* Category Badge */}
@@ -266,7 +438,7 @@ const Projects = () => {
           >
             <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-brand-600" />
           </motion.button>
-        </div>
+        </motion.div>
 
         {/* Dots Indicator */}
         <motion.div
