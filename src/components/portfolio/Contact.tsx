@@ -12,25 +12,25 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@yourname.com",
-      link: "mailto:hello@yourname.com",
+      value: "yadav.creators@gmail.com",
+      link: "mailto:yadav.creators@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+91 73790-81148",
+      link: "tel:+917379081148",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "New York, NY",
+      value: "Mohali, Chandigarh",
       link: "#",
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 pt-5">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -113,7 +113,7 @@ const Contact = () => {
             </div>
 
             {/* Call-to-Action Buttons */}
-            <motion.div
+            {/* <motion.div
               className="flex flex-col sm:flex-row justify-center gap-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,9 +128,9 @@ const Contact = () => {
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule Free Consultation
                 </Button>
-              </motion.div>
+              </motion.div> */}
 
-              <motion.div
+              {/* <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -142,7 +142,7 @@ const Contact = () => {
                   Send Direct Email
                 </Button>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Availability Status */}
             <motion.div
@@ -154,7 +154,7 @@ const Contact = () => {
             >
               <Card className="border-brand-200 bg-gradient-to-r from-brand-50 to-purple-50 max-w-md mx-auto">
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-center space-x-3 mb-3">
+                  <div className="flex items-center justify-center space-x-3 mb-0">
                     <motion.div
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
@@ -164,9 +164,7 @@ const Contact = () => {
                       Available for New Projects
                     </h4>
                   </div>
-                  <p className="text-gray-600 text-sm">
-                    Currently accepting projects for Q2 2024
-                  </p>
+                  
                 </CardContent>
               </Card>
             </motion.div>

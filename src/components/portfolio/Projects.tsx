@@ -13,288 +13,454 @@ const Projects = () => {
   const allProjects = [
     // Wellness
     {
-      title: "Organic Wellness Store",
+      title: "Dharishah Ayurveda",
       description:
-        "Natural health and wellness Shopify store with subscription boxes, personalized recommendations, and wellness tracking.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Subscription", "Wellness", "Health Tracking"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Buy Trusted Ayurvedic Medicines Online | Dharishah Ayurveda Since 1889",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_269.png",
+      tags: ["Shopify", "Custom Theme", "Wellness", "Health Care" , "Ayurvedic"],
+      liveUrl: "https://dharishahayurveda.com",
       category: "Wellness",
-      year: "2024",
     },
     {
-      title: "Yoga & Meditation Studio",
+      title: "Granos",
       description:
-        "Holistic wellness platform with class booking, meditation guides, and community features for mind-body wellness.",
-      image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Booking System", "Community", "Meditation"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Get nutrient-rich raw pumpkin seeds from Granos India online at affordable prices",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_270.png",
+      tags: ["Shopify", "Custom Design", "Wellness", "Health Care" , "Snacks"],
+      liveUrl: "https://granosindia.com",
       category: "Wellness",
-      year: "2024",
     },
     {
-      title: "Natural Supplements Store",
+      title: "Skyway",
       description:
-        "Premium supplement e-commerce with detailed product information, health assessments, and expert consultations.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Health Assessment", "Expert Chat", "Custom Forms"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "The tastiest and cleanest protein milkshake to get 26g of complete milk protein",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_266.png",
+      tags: ["Shopify", "Wellness", "Custom Design", "Custom Theme"],
+      liveUrl: "https://www.takeskyway.com",
       category: "Wellness",
-      year: "2023",
     },
+    {
+      title: "Ace Blend",
+      description:
+        "Nature-based modern nutrition crafted for everybody",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_1_2.png",
+      tags: ["Shopify", "Custom Theme", "Storefront API", "Wellness"],
+      liveUrl: "https://aceblend.com",
+      category: "Wellness",
+    },
+    {
+      title: "Miduty",
+      description:
+        "India's Number 1 Nutraceutical Brand and Online Supplement Store",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/OBpOuR8gTdUTVsVPQSLJv5TQNQ_1.png",
+      tags: ["Shopify", "Custom Theme", "Wellness", "Health Tracking"],
+      liveUrl: "https://miduty.in",
+      category: "Wellness",
+    },
+   
+
+
+    {
+      title: "GleeFull Supps",
+      description:
+        "Nature-based modern nutrition crafted for everybody",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_2.png",
+      tags: ["Shopify Plus", "Wellness", "Custom Theme"],
+      liveUrl: "https://gleefullsupps.com",
+      category: "Wellness",
+    },
+
+    {
+      title: "Wellbeing Nutrition India",
+      description:
+        "Health and Beauty Supplements Online",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/66d2e8c91e73c0ca7470edf4_Wellbeing-p-500.png",
+      tags: ["Shopify Plus", "Wellness", "Landing Page"],
+      liveUrl: "https://wellbeingnutrition.com",
+      category: "Wellness",
+    },
+    {
+      title: "Zeroharm Sciences",
+      description:
+        "100% Plant Based Natural Health Supplements India",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/66d2e90210a8d05fd3f131fc_ZEOHARM-p-500.png",
+      tags: ["Shopify", "Wellness", "Landing Page"],
+      liveUrl: "https://www.zeroharm.in",
+      category: "Wellness",
+    },
+    {
+      title: "Cannavedic",
+      description:
+        "Buy CBD Oil India | Licensed Under Ministry of Ayush",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_4.png",
+      tags: ["Shopify", "Wellness", "Landing Page", "Custom Theme"],
+      liveUrl: "https://cannavedic.in",
+      category: "Wellness",
+    },
+
+    {
+      title: "Good Monk",
+      description:
+        "Good Monk - As Seen on Shark Tank | India's First Nutrition Health Mix",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_264.png",
+      tags: ["Shopify", "Wellness", "Landing Page", "Custom Theme"],
+      liveUrl: "https://www.goodmonk.in/",
+      category: "Wellness",
+    },
+    
+
+    {
+      title: "Good Veda",
+      description:
+        "Goodveda – Ayurvedic Wellness for Chronic Disease Reversal",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_268.png",
+      tags: ["Shopify", "Wellness", "Landing Page", "Custom Theme"],
+      liveUrl: "https://goodveda.com",
+      category: "Wellness",
+    },
+    
+
+   
+    
+    
+
+    
 
     // Clothing
     {
-      title: "Premium Fashion Boutique",
+      title: "Serra Kirdar",
       description:
-        "High-end clothing store with virtual try-on, size matching, and personal styling services.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "AR Try-On", "Size Guide", "Personal Styling"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Serrakirdar is the global go-to platform for curated fashion edits from edgy independent brands.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_7.png",
+      tags: ["Shopify", "Custom Theme", "Clothing", "Personal Styling"],
+      liveUrl: "https://serrakirdar.com",
       category: "Clothing",
-      year: "2024",
     },
     {
-      title: "Sustainable Fashion Brand",
+      title: "Wearanemoia",
       description:
-        "Eco-friendly clothing store with sustainability tracking, carbon offset integration, and ethical sourcing information.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Sustainability", "Carbon Tracking", "Ethical"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Anemoia is a clothing label rooted in stories of work, memory, and identity.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_8.png",
+      tags: ["Shopify", "Custom Theme", "Personal Styling", "Size Guide"],
+      liveUrl: "https://wearanemoia.com",
       category: "Clothing",
-      year: "2024",
     },
     {
-      title: "Athletic Wear Collection",
+      title: "RAF",
       description:
-        "Performance sportswear store with fitness integration, workout plans, and athlete endorsements.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Fitness Integration", "Performance", "Athletes"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "When you wear the garments of RAF, you are not just wearing outfits.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_5.png",
+      tags: ["Shopify", "Fashion", "Performance", "Custom Theme"],
+      liveUrl: "http://raf-clothing.com",
       category: "Clothing",
-      year: "2023",
+    },
+    {
+      title: "QUOD",
+      description:
+        "QUOD fuses period femininity with classic tailoring and modern streetwear.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_5.png",
+      tags: ["Shopify", "Fitness Integration", "Performance", "Athletes"],
+      liveUrl: "https://quodbyikshitpande.com",
+      category: "Clothing",
+    },
+    {
+      title: "Miraclebrand",
+      description:
+        "Say goodbye to dirty sheets and towels. Find premium options made with pure, natural silver that kills 99.9% of bacteria.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_27.png",
+      tags: ["Shopify Plus", "Custom Theme", "Clothing", 'Cleaning'],
+      liveUrl: "https://www.miraclebrand.co",
+      category: "Clothing",
+    },
+    {
+      title: "Wearedip",
+      description:
+        "Powerful, sustainable, plant based laundry and dishwasher detergent in the form of versatile little strips.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_28_1.png",
+      tags: ["Shopify", "Custom Design", "Cleaning", "Clothing"],
+      liveUrl: "https://wearedip.co.uk",
+      category: "Clothing",
     },
 
     // Adornment
     {
-      title: "Luxury Jewelry Boutique",
+      title: "Renu-oberoi",
       description:
-        "Exquisite jewelry store with 360° product views, custom engraving, and virtual try-on for precious pieces.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "360° View", "Custom Engraving", "AR Try-On"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "DISCOVER THE WORLD OF RENU OBEROI",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_9.png",
+      tags: ["Shopify", "360° View", "Custom Engraving", "Luxery"],
+      liveUrl: "https://renuoberoi.com/",
       category: "Adornment",
-      year: "2024",
     },
     {
-      title: "Handcrafted Accessories",
+      title: "Deepa Gurnani",
       description:
-        "Artisan accessories store with maker stories, customization options, and limited edition collections.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Customization", "Artisan Stories", "Limited Edition"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Luxury Handmade Accessories",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_10.png",
+      tags: ["Shopify", "Customization", "Custom Theme", "Luxery"],
+      liveUrl: "https://www.deepagurnani.com",
       category: "Adornment",
-      year: "2024",
     },
     {
-      title: "Wedding Jewelry Collection",
+      title: "A Few Wood Men",
       description:
-        "Bridal jewelry store with appointment booking, custom design services, and wedding timeline integration.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Appointment Booking", "Custom Design", "Bridal"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "A Few Wood Men crafts stylish wooden and metal timepieces for men worldwide.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_11_1.png",
+      tags: ["Shopify", "Appointment Booking", "Custom Design", "Luxery"],
+      liveUrl: "https://www.afewwoodmen.com",
       category: "Adornment",
-      year: "2023",
     },
-
+    {
+      title: "Nutrispray",
+      description:
+        "Nutrispray | Glutathione Supplement Spray | B12 Folate Supplement",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_271_1.png",
+      tags: ["Shopify", "Skincare", "Beauty", "Custom Design"],
+      liveUrl: "https://nutrispray.in",
+      category: "Adornment",
+    },
+    {
+      title: "Protouchskin",
+      description:
+        "India's 1st Tech-led Range of Personal Care Devices From Protouch",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_273_2.png",
+      tags: ["Shopify", "Skincare", "Beauty", "Personal Care Devices"],
+      liveUrl: "https://protouchskin.com",
+      category: "Adornment",
+    },
+    {
+      title: "Prismara",
+      description:
+        "Shop Prismara — India’s first lab-grown diamond &amp; natural gemstone lifestyle jewelry brand.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_275_1.png",
+      tags: ["Shopify", "Skincare", "Beauty", "Landing Page"],
+      liveUrl: "https://prismara.in",
+      category: "Adornment",
+    },
+    {
+      title: "5minskin",
+      description:
+        "Sculpt 2.0 by 5minskin: at-home laser hair removal with pro, pain-free results.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_252_1.png",
+      tags: ["Shopify", "Skincare", "Beauty", "Landing Page"],
+      liveUrl: "https://5minskin.com",
+      category: "Adornment",
+    },
+    {
+      title: "Color Chemistry",
+      description:
+        "Buy Natural & Organic Makeup Products Online",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_26.png",
+      tags: ["Shopify", "Beauty", "Custom Design", "Custom Theme"],
+      liveUrl: "https://juicychemistry.com/pages/color-chemistry",
+      category: "Adornment",
+    },
+    {
+      title: "Aminu",
+      description:
+        "High Performing, Wholistic Clean Skincare.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_31.png",
+      tags: ["Shopify", "Skincare", "Beauty", "Landing Page"],
+      liveUrl: "https://www.aminu.life",
+      category: "Adornment",
+    },
+    {
+      title: "Faith & Patience",
+      description:
+        "India's first Camel milk hair care and skin care brand.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_251.png",
+      tags: ["Shopify", "Custom Theme", "Custom Design", "Landing Page"],
+      liveUrl: "https://faithandpatience.co.in/pages/meeoow",
+      category: "Adornment",
+    },
+    
     // Decor
     {
-      title: "Modern Home Decor",
+      title: "Dreamer Designs",
       description:
-        "Contemporary furniture and decor store with AR room visualization and interior design consultation.",
-      image: "/api/placeholder/600/400",
+        "Home To The Dreamer Line Of 5D Diamond Painting Kits - A Premium Diamond Painting Experience.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_261.png",
       tags: ["Shopify Plus", "AR Visualization", "Interior Design", "Modern"],
-      liveUrl: "#",
-      codeUrl: "#",
+      liveUrl: "https://dreamerdesigns.com",
       category: "Decor",
-      year: "2024",
     },
     {
-      title: "Vintage Furniture Gallery",
+      title: "Atelier Ashiesh shah",
       description:
-        "Curated vintage furniture store with authenticity certificates, restoration services, and design history.",
-      image: "/api/placeholder/600/400",
-      tags: ["WordPress", "Authenticity", "Restoration", "History"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Where luxury meets artistry. Explore handcrafted furniture, lighting, and bespoke designs inspired by Indian art forms.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_32.png",
+      tags: ["Shopify", "Architech", "Restoration", "Decoration"],
+      liveUrl: "https://atelierashieshshah.com/",
       category: "Decor",
-      year: "2024",
     },
     {
-      title: "Garden & Outdoor Living",
+      title: "Rad Living",
       description:
-        "Outdoor decor and garden furniture store with seasonal collections and landscaping consultation.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Seasonal", "Landscaping", "Outdoor"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "India's best soy candles, premium fragrances. Find your quirk at our online store today!",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_33.png",
+      tags: ["Shopify", "Custom Design", "Luxery", "Decoration"],
+      liveUrl: "https://www.radliving.in",
       category: "Decor",
-      year: "2023",
     },
-
+    {
+      title: "Miraclebrand",
+      description:
+        "Say goodbye to dirty sheets and towels. Find premium options made with pure, natural silver that kills 99.9% of bacteria.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_27.png",
+      tags: ["Shopify Plus", "Custom Theme", "Clothing", 'Cleaning'],
+      liveUrl: "https://www.miraclebrand.co",
+      category: "Decor",
+    },
+    {
+      title: "Wearedip",
+      description:
+        "Powerful, sustainable, plant based laundry and dishwasher detergent in the form of versatile little strips.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_28_1.png",
+      tags: ["Shopify", "Custom Design", "Cleaning", "Clothing"],
+      liveUrl: "https://wearedip.co.uk",
+      category: "Decor",
+    },
+    
     // Pet
     {
-      title: "Premium Pet Supply Store",
+      title: "Smart Pet",
       description:
-        "Comprehensive pet store with subscription boxes, pet profiles, and veterinary appointment integration.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Subscription", "Pet Profiles", "Vet Integration"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Smart Pet is a modern pet care brand on a mission to revolutionise the way India cares for its pets.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_277.png",
+      tags: ["Shopify", "Custom Design", "Pet", " Accessories"],
+      liveUrl: "https://thesmartpet.in",
       category: "Pet",
-      year: "2024",
     },
+    
     {
-      title: "Dog Training Academy",
+      title: "Omni Pet",
       description:
-        "Professional dog training platform with video courses, progress tracking, and trainer certification.",
-      image: "/api/placeholder/600/400",
-      tags: [
-        "WordPress",
-        "Video Courses",
-        "Progress Tracking",
-        "Certification",
-      ],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Omni | Dog Food &amp; Supplements | As Seen On Dragons' Den",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_279.png",
+      tags: ["Shopify Plus", "Custom App", "Vet Integration" , "Subscription"],
+      liveUrl: "https://omni.pet/",
       category: "Pet",
-      year: "2024",
     },
+
     {
-      title: "Exotic Pet Specialist",
+      title: "Dog for Dog",
       description:
-        "Specialized store for exotic pets with care guides, expert consultation, and rare species products.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify", "Care Guides", "Expert Chat", "Exotic Species"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Shop Premium & Nutritious Dog Food for a Healthy Diet",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_280.png",
+      tags: ["Shopify", "Expert Chat", "Vet Integration" , "Subscription"],
+      liveUrl: "https://www.dogfordog.com",
       category: "Pet",
-      year: "2023",
     },
 
     // Headless Stores
     {
-      title: "Next.js Headless Commerce",
+      title: "Scooboo",
       description:
-        "Ultra-fast headless Shopify store with Next.js frontend, advanced caching, and seamless mobile experience.",
-      image: "/api/placeholder/600/400",
+        "Scooboo is India’s largest one stop store for art and craft supplies.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_281.png",
       tags: ["Shopify Headless", "Next.js", "GraphQL", "PWA"],
-      liveUrl: "#",
-      codeUrl: "#",
+      liveUrl: "https://scooboo-frontend.vercel.app",
       category: "Headless",
-      year: "2024",
     },
     {
-      title: "React Multi-Channel Store",
+      title: "Woosa",
       description:
-        "Omnichannel headless commerce with React frontend, multiple sales channels, and unified inventory.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Storefront API", "React", "Multi-Channel", "Inventory"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Woosa Sleep | Mattress Store & Showroom Singapore",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_282.png?v=1751273825",
+      tags: ["Shopify Hydrogen", "React", "Storefront API", "GraphQL"],
+      liveUrl: "https://woosasleep.co",
       category: "Headless",
-      year: "2024",
     },
     {
-      title: "Vue.js Performance Store",
+      title: "Atelier Ashiesh shah",
       description:
-        "Lightning-fast headless store with Vue.js, advanced state management, and optimized checkout flow.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Headless", "Vue.js", "State Management", "Optimization"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Where luxury meets artistry. Explore handcrafted furniture, lighting, and bespoke designs inspired by Indian art forms.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_32.png",
+      tags: ["Shopify Hydrogen", "GraphQL", "Shopify API", "Decoration"],
+      liveUrl: "https://atelierashieshshah.com/",
       category: "Headless",
-      year: "2023",
     },
+  
 
     // Custom Apps
     {
-      title: "Inventory Management App",
+      title: "PS Artist Management",
       description:
-        "Custom Shopify app for advanced inventory tracking, automated reordering, and supplier integration.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify App", "Inventory", "Automation", "Supplier Integration"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Custom Laravel app for advanced Payment tracking, automated Emails, and supplier integration.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_283.png",
+      tags: ["Laravel", "Admin API", "Invoice", "Payment Management"],
+      liveUrl: "http://142.93.231.32",
       category: "Custom Apps",
-      year: "2024",
     },
     {
-      title: "Customer Loyalty Platform",
+      title: "Property(Product) Management Platform",
       description:
-        "Comprehensive loyalty app with points system, tier management, and gamification features.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify App", "Loyalty", "Gamification", "Customer Retention"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Comprehensive Property(Product) Management app to Add,Edit,Delet Property(Product) for multi vendors",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_284.png",
+      tags: ["Shopify App", "Remix", "Shopify API", "React", "Property(Product) Management"],
+      liveUrl: "https://property.italiancorners.it/dashboard",
       category: "Custom Apps",
-      year: "2024",
     },
+
     {
-      title: "Advanced Analytics Dashboard",
+      title: "Scooboo",
       description:
-        "Custom analytics app with AI-powered insights, predictive analytics, and custom reporting.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify App", "Analytics", "AI Insights", "Reporting"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Scooboo is India’s largest one stop store for art and craft supplies.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_281.png",
+      tags: ["Shopify Headless", "Next.js", "GraphQL", "PWA"],
+      liveUrl: "https://scooboo-frontend.vercel.app",
       category: "Custom Apps",
-      year: "2023",
     },
+    
 
     // Shopify Plus Stores
     {
-      title: "Enterprise Fashion Marketplace",
+      title: "Omni Pet",
       description:
-        "Large-scale Shopify Plus marketplace with multiple vendors, advanced B2B features, and custom checkout.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Marketplace", "B2B", "Enterprise"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Omni | Dog Food &amp; Supplements | As Seen On Dragons' Den",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_279.png",
+      tags: ["Shopify Plus", "Custom App", "Vet Integration" , "Subscription"],
+      liveUrl: "https://omni.pet/",
       category: "Shopify Plus",
-      year: "2024",
     },
     {
-      title: "Global Electronics Retailer",
+      title: "Dreamer Designs",
       description:
-        "International Shopify Plus store with multi-currency, localization, and complex product configurations.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Multi-Currency", "Localization", "Global"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Home To The Dreamer Line Of 5D Diamond Painting Kits - A Premium Diamond Painting Experience.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_261.png",
+      tags: ["Shopify Plus", "AR Visualization", "Interior Design", "Modern"],
+      liveUrl: "https://dreamerdesigns.com",
       category: "Shopify Plus",
-      year: "2024",
     },
     {
-      title: "Premium Subscription Service",
+      title: "GleeFull Supps",
       description:
-        "Sophisticated Shopify Plus subscription platform with flexible billing, customer portals, and analytics.",
-      image: "/api/placeholder/600/400",
-      tags: ["Shopify Plus", "Subscription", "Customer Portal", "Analytics"],
-      liveUrl: "#",
-      codeUrl: "#",
+        "Nature-based modern nutrition crafted for everybody",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_2.png",
+      tags: ["Shopify Plus", "Wellness", "Custom Theme"],
+      liveUrl: "https://gleefullsupps.com",
       category: "Shopify Plus",
-      year: "2023",
     },
+{
+      title: "Wellbeing Nutrition India",
+      description:
+        "Health and Beauty Supplements Online",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/66d2e8c91e73c0ca7470edf4_Wellbeing-p-500.png",
+      tags: ["Shopify Plus", "Wellness", "Landing Page"],
+      liveUrl: "https://wellbeingnutrition.com",
+      category: "Shopify Plus",
+    },
+ {
+      title: "Miraclebrand",
+      description:
+        "Say goodbye to dirty sheets and towels. Find premium options made with pure, natural silver that kills 99.9% of bacteria.",
+      image: "https://cdn.shopify.com/s/files/1/0778/3012/7901/files/Group_27.png",
+      tags: ["Shopify Plus", "Custom Theme", "Clothing", 'Cleaning'],
+      liveUrl: "https://www.miraclebrand.co",
+      category: "Shopify Plus",
+    },
+
+
   ];
 
   const categories = [
@@ -355,7 +521,7 @@ const Projects = () => {
         "(min-width: 768px)": { slidesToScroll: 3 },
       },
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })],
+  
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -487,7 +653,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <motion.div
                   key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_33.333%] min-w-0 px-3"
+                  className="flex-[0_0_100%] md:flex-[0_0_33.333%] min-w-0 px-3 mb-4"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -495,74 +661,76 @@ const Projects = () => {
                 >
                   <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 shadow-lg h-full bg-gradient-to-br from-white to-gray-50/50">
                     <div className="relative overflow-hidden">
-                      <div className="aspect-video bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center relative overflow-hidden">
-                        {/* Project Image Placeholder */}
-                        <motion.div
-                          className="text-6xl opacity-30"
-                          animate={{
-                            scale: [1, 1.1, 1],
-                            rotate: [0, 5, 0],
-                          }}
-                          transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                          }}
-                        >
-                          {project.category === "Wellness"
-                            ? "🌿"
-                            : project.category === "Clothing"
-                              ? "👕"
-                              : project.category === "Adornment"
-                                ? "💎"
-                                : project.category === "Decor"
-                                  ? "🏠"
-                                  : project.category === "Pet"
-                                    ? "🐾"
-                                    : project.category === "Headless"
-                                      ? "⚡"
-                                      : project.category === "Custom Apps"
-                                        ? "⚙️"
-                                        : project.category === "Shopify Plus"
-                                          ? "💜"
-                                          : "🛍️"}
-                        </motion.div>
+                      <div className="bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center relative overflow-hidden">
+                        {/* Project Image or Icon */}
+                        {project.image ? (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="object-contain w-full h-full"
+                            style={{ 
+                              filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))',
+                              maxHeight: '18rem'
+                            }}
+                          />
+                        ) : (
+                          <motion.div
+                            className="text-6xl opacity-30"
+                            animate={{
+                              scale: [1, 1.1, 1],
+                              rotate: [0, 5, 0],
+                            }}
+                            transition={{
+                              duration: 4,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                          >
+                            {project.category === "Wellness"
+                              ? "🌿"
+                              : project.category === "Clothing"
+                                ? "👕"
+                                : project.category === "Adornment"
+                                  ? "💎"
+                                  : project.category === "Decor"
+                                    ? "🏠"
+                                    : project.category === "Pet"
+                                      ? "🐾"
+                                      : project.category === "Headless"
+                                        ? "⚡"
+                                        : project.category === "Custom Apps"
+                                          ? "⚙️"
+                                          : project.category === "Shopify Plus"
+                                            ? "💜"
+                                            : "🛍️"}
+                          </motion.div>
+                        )}
 
                         {/* Category Badge */}
                         <div className="absolute top-4 left-4">
                           <Badge className="bg-white/90 text-gray-700 backdrop-blur-sm">
-                            {project.category} • {project.year}
+                            {project.category} 
                           </Badge>
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
+                        <div className="this_will_be_visible_only_in_desktop absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-500 flex items-center justify-center">
                           <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 flex space-x-3">
                             <motion.div
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             >
-                              <Button
-                                size="sm"
-                                className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg"
-                              >
-                                <ExternalLink className="w-4 h-4 mr-2" />
-                                Live Site
-                              </Button>
+                              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                <Button
+                                  size="sm"
+                                  className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg"
+                                >
+                                  <ExternalLink className="w-4 h-4 mr-2" />
+                                  Live Site
+                                </Button>
+                              </a>
                             </motion.div>
-                            <motion.div
-                              whileHover={{ scale: 1.1 }}
-                              whileTap={{ scale: 0.9 }}
-                            >
-                              <Button
-                                size="sm"
-                                variant="outline"
-                                className="bg-white/90 border-white text-gray-900 hover:bg-white backdrop-blur-sm shadow-lg"
-                              >
-                                <Github className="w-4 h-4 mr-2" />
-                                Code
-                              </Button>
-                            </motion.div>
+                           
                           </div>
                         </div>
                       </div>
@@ -585,6 +753,15 @@ const Projects = () => {
                             {tag}
                           </Badge>
                         ))}
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <Button
+                                  size="sm"
+                                  className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg visible_only_in_mobile bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-lg scale-105"
+                                >
+                                  <ExternalLink className="w-4 h-4 mr-2" />
+                                  Live Site
+                                </Button>
+                        </a>
                       </div>
                     </CardContent>
                   </Card>
@@ -596,20 +773,22 @@ const Projects = () => {
           {/* Navigation Arrows */}
           <motion.button
             onClick={scrollPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-brand-50 transition-colors z-10 group"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center will-change-transform"
+            whileHover={{ scale: 1.1, y: 0 }}
+            whileTap={{ scale: 0.95, y: 0 }}
+            style={{ transition: "transform 0.15s cubic-bezier(0.4,0,0.2,1)" }}
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-brand-600" />
+            <ChevronLeft className="w-6 h-6 text-gray-600" />
           </motion.button>
 
           <motion.button
             onClick={scrollNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-brand-50 transition-colors z-10 group"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center will-change-transform"
+            whileHover={{ scale: 1.1, y: 0 }}
+            whileTap={{ scale: 0.95, y: 0 }}
+            style={{ transition: "transform 0.15s cubic-bezier(0.4,0,0.2,1)" }}
           >
-            <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-brand-600" />
+            <ChevronRight className="w-6 h-6 text-gray-600" />
           </motion.button>
         </motion.div>
 
@@ -636,22 +815,7 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* View All Projects Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button
-            size="lg"
-            variant="outline"
-            className="px-8 py-6 text-lg border-2 hover:bg-brand-50 hover:border-brand-300 transition-all duration-300"
-          >
-            View All Projects
-          </Button>
-        </motion.div>
+        
       </div>
     </section>
   );

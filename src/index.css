@@ -99,3 +99,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Show only on mobile screens */
+.visible_only_in_mobile {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .visible_only_in_mobile {
+    display: none !important;
+    width: 100%;
+  }
+}
+
+/* Show only on desktop screens */
+.this_will_be_visible_only_in_desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .this_will_be_visible_only_in_desktop {
+    display: flex !important;
+  }
+}

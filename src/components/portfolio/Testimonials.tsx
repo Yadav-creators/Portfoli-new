@@ -9,78 +9,44 @@ import { useCallback, useEffect, useState } from "react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "CEO",
-      company: "Fashion Forward",
-      image: "👩‍💼",
+      name: "Nilay",
+      role: "Ace Blend CTO",
       rating: 5,
-      text: "Absolutely incredible work! Our Shopify store conversion rate increased by 300% after the redesign. The attention to detail and user experience is phenomenal.",
-      project: "E-commerce Redesign",
-      industry: "Fashion",
-      gradient: "from-pink-400 to-purple-500",
+      text: "Thanks to Bhoopendra, our Shopify store now looks professional and performs flawlessly. They customized features we never thought possible, and our sales have doubled since the relaunch!",
+      industry: "Wellness",
     },
     {
-      name: "Michael Chen",
-      role: "Founder",
-      company: "TechStart Solutions",
-      image: "👨‍💻",
+      name: "Kanica",
+      role: "Manager of Deepa Gurnani",
       rating: 5,
-      text: "The WordPress development was flawless. Clean code, fast loading times, and exactly what we envisioned. Highly recommend for any web development needs.",
-      project: "Corporate Website",
-      industry: "Technology",
-      gradient: "from-blue-400 to-cyan-500",
+      text: "From start to finish, the process was seamless. Bhoopendra created a visually appealing Shopify store with all the features we needed to scale. Our customers love the new look!",
+      industry: "Jwellery",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Marketing Director",
-      company: "GreenLife Organics",
-      image: "👩‍🌾",
+      name: "Ashish Shah",
+      role: "Founder of Atelier",
       rating: 5,
-      text: "Our online sales doubled within the first month! The Shopify Plus implementation was seamless and the custom features work perfectly.",
-      project: "Shopify Plus Store",
-      industry: "Organic Products",
-      gradient: "from-green-400 to-emerald-500",
+      text: "I’m so impressed with the Shopify store that Bhoopendra built for us. It’s fast, user-friendly, and optimized for conversions. They went above and beyond to make sure every detail was perfect.",
+      industry: "Decor",
     },
+
     {
-      name: "David Thompson",
-      role: "Owner",
-      company: "Artisan Crafts Co.",
-      image: "👨‍🎨",
+      name: "Abeer",
+      role: "Director of Anemoia",
       rating: 5,
-      text: "Beautiful design that perfectly captures our brand essence. The WooCommerce integration handles our complex product variations effortlessly.",
-      project: "WooCommerce Store",
-      industry: "Handmade Crafts",
-      gradient: "from-orange-400 to-red-500",
+      text: "Working with Bhoopendra was an absolute pleasure. They built us a stunning Shopify store that perfectly represents our brand. The functionality and user experience are top-notch! Highly recommend their services.",
+      industry: "Clothing",
     },
-    {
-      name: "Lisa Park",
-      role: "Operations Manager",
-      company: "FitLife Supplements",
-      image: "👩‍⚕️",
-      rating: 5,
-      text: "The subscription feature implementation was exactly what we needed. Customer retention improved significantly with the new user experience.",
-      project: "Subscription Platform",
-      industry: "Health & Wellness",
-      gradient: "from-purple-400 to-pink-500",
-    },
-    {
-      name: "James Wilson",
-      role: "Creative Director",
-      company: "Design Studios Inc.",
-      image: "👨‍🎭",
-      rating: 5,
-      text: "Professional, creative, and delivered on time. The website perfectly showcases our portfolio and has attracted numerous high-quality clients.",
-      project: "Portfolio Website",
-      industry: "Creative Agency",
-      gradient: "from-indigo-400 to-purple-500",
-    },
+
+    
+  
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: "start",
-      slidesToScroll: 4,
+      slidesToScroll: 2,
       breakpoints: {
         "(max-width: 768px)": { slidesToScroll: 1 },
         "(max-width: 1024px)": { slidesToScroll: 2 },
@@ -120,7 +86,7 @@ const Testimonials = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-purple-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-purple-50 relative overflow-hidden pb-10">
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -216,7 +182,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] min-w-0 px-3"
+                  className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 px-3"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -265,7 +231,7 @@ const Testimonials = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                       >
                         <Quote className="absolute -top-2 -left-1 w-4 h-4 text-brand-300 transform rotate-180" />
-                        "{testimonial.text}"
+                        {testimonial.text}
                         <Quote className="absolute -bottom-2 -right-1 w-4 h-4 text-brand-300" />
                       </motion.blockquote>
 
@@ -276,17 +242,6 @@ const Testimonials = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                       >
-                        {/* Avatar */}
-                        <motion.div
-                          className={`w-14 h-14 bg-gradient-to-br ${testimonial.gradient} rounded-full flex items-center justify-center text-2xl shadow-lg`}
-                          whileHover={{
-                            scale: 1.1,
-                            rotate: [0, -5, 5, 0],
-                          }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          {testimonial.image}
-                        </motion.div>
 
                         {/* Name and Role */}
                         <div className="text-center">
@@ -296,18 +251,10 @@ const Testimonials = () => {
                           <p className="text-brand-600 font-semibold mb-1 text-sm">
                             {testimonial.role}
                           </p>
-                          <p className="text-gray-600 text-xs">
-                            {testimonial.company}
-                          </p>
+                          
                         </div>
 
-                        {/* Project Badge */}
-                        <Badge
-                          variant="secondary"
-                          className="bg-gradient-to-r from-brand-100 to-purple-100 text-brand-700 border-0 px-4 py-1"
-                        >
-                          {testimonial.project}
-                        </Badge>
+                       
                       </motion.div>
                     </CardContent>
 
@@ -363,7 +310,7 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Success Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -404,7 +351,7 @@ const Testimonials = () => {
               <div className="text-sm text-gray-600">{stat.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

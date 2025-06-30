@@ -9,7 +9,7 @@ const About = () => {
     { icon: Users, label: "Happy Clients", value: "50+" },
     { icon: Award, label: "Projects Completed", value: "100+" },
     { icon: Coffee, label: "Cups of Coffee", value: "1000+" },
-    { icon: Zap, label: "Years Experience", value: "4+" },
+    { icon: Zap, label: "Years Experience", value: "5+" },
   ];
 
   const services = [
@@ -31,7 +31,7 @@ const About = () => {
       description:
         "Custom websites, e-commerce solutions, and content management systems.",
       features: [
-        "Custom Theme Development",
+        "Custom Software Development",
         "React Website Development",
         "Headless Website Development",
         "WordPress Development",
