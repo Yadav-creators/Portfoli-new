@@ -753,7 +753,9 @@ const Projects = () => {
                             {tag}
                           </Badge>
                         ))}
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                       
+                      </div>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                           <Button
                                   size="sm"
                                   className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg visible_only_in_mobile bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-lg scale-105"
@@ -762,7 +764,6 @@ const Projects = () => {
                                   Live Site
                                 </Button>
                         </a>
-                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
