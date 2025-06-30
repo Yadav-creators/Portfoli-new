@@ -55,7 +55,9 @@ const Navigation = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <Button className="bg-brand-600 hover:bg-brand-700">
+                  <a href="tel:+917379081148">
                   Let's Talk
+                  </a>
                 </Button>
               </motion.div>
             </div>
