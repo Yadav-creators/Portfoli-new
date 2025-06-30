@@ -32,7 +32,7 @@ const Navigation = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-2xl font-bold bg-gradient-to-r from-brand-600 to-brand-700 bg-clip-text text-transparent"
             >
-              <img src="./../../../public/w_logo.png" alt="Logo" className=""  style={{ filter: "invert(1)", maxWidth: "160px" }}/>
+              <img src="https://cdn.shopify.com/s/files/1/0778/3012/7901/files/w_logo_1.png" alt="Logo" className=""  style={{ filter: "invert(1)", maxWidth: "160px" }}/>
             </motion.div>
 
             {/* Desktop Navigation */}
