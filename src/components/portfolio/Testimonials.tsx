@@ -52,7 +52,7 @@ const Testimonials = () => {
         "(max-width: 1024px)": { slidesToScroll: 2 },
       },
     },
-    [Autoplay({ delay: 6000, stopOnInteraction: false })],
+    
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
